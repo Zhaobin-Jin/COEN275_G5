@@ -6,16 +6,19 @@ public class Employee {
     private String name;
     private String title;
 
-    public Employee(){
+    public Employee(int id){
+        this.id = id;
         //TODO
     }
 
-    public Employee(String name){
+    public Employee(int id, String name){
+        this.id = id;
         this.name = name;
         //TODO
     }
 
-    public Employee(String name, String title){
+    public Employee(int id, String name, String title){
+        this.id = id;
         this.name = name;
         this.title = title;
         //TODO

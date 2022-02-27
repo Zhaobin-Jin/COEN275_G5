@@ -5,16 +5,19 @@ public class Manager {
     private String name;
     private String title;
 
-    public Manager(){
+    public Manager(int id){
+        this.id = id;
         //TODO
     }
 
-    public Manager(String name){
+    public Manager(int id, String name){
+        this.id = id;
         this.name = name;
         //TODO
     }
 
-    public Manager(String name, String title){
+    public Manager(int id, String name, String title){
+        this.id = id;
         this.name = name;
         this.title = title;
         //TODO
