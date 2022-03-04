@@ -1,52 +1,20 @@
 package BackEnd;
 
 
-public class Employee {
-    private int id;
-    private String name;
-    private String title;
+public class Employee extends People{
 
-    public Employee(int id){
-        this.id = id;
-        //TODO
+    public Employee(int id) {
+        super(id);
     }
 
     public Employee(int id, String name){
-        this.id = id;
-        this.name = name;
-        //TODO
+        super(id, name);
     }
 
     public Employee(int id, String name, String title){
-        this.id = id;
-        this.name = name;
-        this.title = title;
-        //TODO
+        super(id, name, title);
     }
 
-    public int getId(){
-        return this.id;
-    }
-
-    public String getName(){
-        return this.name;
-    }
-
-    public String getTitle(){
-        return this.title;
-    }
-
-    public void setName(String name){
-        //TODO
-        this.name = name;
-        return;
-    }
-
-    public void setTitle(String title){
-        //TODO
-        this.title = title;
-        return;
-    }
 
     public void ChangeStatus(Task task, int status){
         //TODO

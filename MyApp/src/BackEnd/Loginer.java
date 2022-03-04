@@ -5,7 +5,7 @@ public class Loginer {
     private String password;
 
     public Loginer(){
-
+        
     }
     
     public Loginer(String username, String password){

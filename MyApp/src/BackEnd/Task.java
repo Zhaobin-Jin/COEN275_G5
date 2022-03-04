@@ -10,15 +10,20 @@ public class Task {
     private Date DDL;
 
     public Task(){
-
+        //TODO
     }
 
     public Task(String des){
-
+        this.des = des;
+        //TODO
     }
 
     public Task(String des, int status, int pri, Date ddl){
-        
+        this.des = des;
+        this.status = status;
+        this.pri = pri;
+        this.DDL = ddl;
+        //TODO
     }
 
     public int getId(){
@@ -58,6 +63,10 @@ public class Task {
 
     public void setDDL(Date DDL){
         this.DDL = DDL;
+        //TODO
+    }
+
+    public void addPeople(){
         //TODO
     }
 
