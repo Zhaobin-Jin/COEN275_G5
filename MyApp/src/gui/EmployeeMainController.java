@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class EmployeeMainController {
 
@@ -35,6 +36,13 @@ public class EmployeeMainController {
     // connect app class to controller
     public void setApp(App app) {
         this.app = app;
+    }
+
+    private Stage primaryStage;
+
+    // connect primary stage to task stage
+    public void setPrimaryStage(Stage primaryStage) {
+        this.primaryStage = primaryStage;
     }
 
     @FXML

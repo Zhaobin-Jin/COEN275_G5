@@ -33,10 +33,13 @@ public class App extends Application {
         LoginController loginController = loader.getController();
         loginController.setApp(this);
 
-        // scene on Stage
+        // scene on stage
         scene = new Scene(pane);
         primaryStage.setScene(scene);
+        primaryStage.sizeToScene();
         primaryStage.show();
+        primaryStage.setMinWidth(primaryStage.getWidth());
+        primaryStage.setMinHeight(primaryStage.getHeight());
     }
 
     public void changeScene(String fxml) throws IOException {
@@ -54,9 +57,11 @@ public class App extends Application {
         if (fxml == "ManagerMain.fxml") {
             ManagerMainController managerMainController = loader.getController();
             managerMainController.setApp(this);
+            managerMainController.setPrimaryStage(this.primaryStage);
         } else {
             EmployeeMainController employeeMainController = loader.getController();
             employeeMainController.setApp(this);
+            employeeMainController.setPrimaryStage(this.primaryStage);
         }
 
         // scene on Stage
