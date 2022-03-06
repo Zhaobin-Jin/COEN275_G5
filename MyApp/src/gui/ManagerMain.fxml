@@ -8,15 +8,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManagerMain">
+<Pane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button fx:id="QuitButton" layoutX="26.0" layoutY="538.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="52.0" text="Quit">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="TaskCreateButton" layoutX="145.0" layoutY="25.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="27.0" text="+" />
-      <TextField fx:id="TaskIdTextField" layoutX="185.0" layoutY="25.0" prefHeight="29.0" prefWidth="112.0" />
+      <Button fx:id="TaskCreateButton" layoutX="185.0" layoutY="25.0" mnemonicParsing="false" onAction="#createTask" prefHeight="29.0" prefWidth="29.0" text="+" />
       <ScrollPane layoutX="185.0" layoutY="73.0" prefHeight="518.0" prefWidth="565.0">
         <content>
           <AnchorPane fx:id="Display" minHeight="0.0" minWidth="0.0" prefHeight="730.0" prefWidth="545.0" />
@@ -33,10 +32,10 @@
          </font>
       </Text>
       <Text fx:id="TitleTextField" layoutX="56.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manager" textAlignment="CENTER" />
-      <Button fx:id="AsignEmployeeButton" layoutX="26.0" layoutY="164.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Asign Employee" />
-      <Button fx:id="RemoveTaskButton" layoutX="25.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Remove Task" />
-      <Button fx:id="RemoveEmployeeButton" layoutX="26.0" layoutY="204.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Remove Employee" />
-      <Button fx:id="ChangeTaskButton" layoutX="25.0" layoutY="283.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Change Task" />
-      <TextField fx:id="TaskDescriptionTextField" layoutX="311.0" layoutY="25.0" prefHeight="29.0" prefWidth="433.0" />
+      <Button fx:id="AssignEmployeeButton" layoutX="26.0" layoutY="164.0" mnemonicParsing="false" onAction="#assignEmployee" prefHeight="25.0" prefWidth="129.0" text="Assign Employee" />
+      <Button fx:id="ChangeTaskButton" layoutX="25.0" layoutY="244.0" mnemonicParsing="false" onAction="#changeTask" prefHeight="25.0" prefWidth="129.0" text="Change Task" />
+      <Button fx:id="RemoveEmployeeButton" layoutX="26.0" layoutY="204.0" mnemonicParsing="false" onAction="#removeEmployee" prefHeight="25.0" prefWidth="129.0" text="Remove Employee" />
+      <Button fx:id="RemoveTaskButton" layoutX="25.0" layoutY="283.0" mnemonicParsing="false" onAction="#removeTask" prefHeight="25.0" prefWidth="129.0" text="Remove Task" />
+      <TextField fx:id="TaskDescriptionTextField" layoutX="226.0" layoutY="25.0" prefHeight="29.0" prefWidth="524.0" />
    </children>
 </Pane>

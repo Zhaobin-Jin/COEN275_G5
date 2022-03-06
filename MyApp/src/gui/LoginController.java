@@ -4,16 +4,12 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
 public class LoginController {
 
@@ -39,9 +35,6 @@ public class LoginController {
     private TextField UserIdTextField;
 
     private App app;
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
 
     // connect app class to controller
     public void setApp(App app) {
@@ -59,13 +52,13 @@ public class LoginController {
         if (UserIdTextField.getText().toString().equals("manager")
                 && PasswordTextField.getText().toString().equals("275")) {
             Message.setText("Success!");
-            changeScene("ManagerMain.fxml");
+            app.changeScene("ManagerMain.fxml");
         }
 
         else if (UserIdTextField.getText().toString().equals("employee")
                 && PasswordTextField.getText().toString().equals("275")) {
             Message.setText("Success!");
-            changeScene("EmployeeMain.fxml");
+            app.changeScene("EmployeeMain.fxml");
         }
 
         else if (UserIdTextField.getText().isEmpty()) {
@@ -79,13 +72,6 @@ public class LoginController {
         else {
             Message.setText("Wrong username or password!");
         }
-    }
-
-    public void changeScene(String fxml) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("ManagerMain.fxml"));
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
     }
 
 }
