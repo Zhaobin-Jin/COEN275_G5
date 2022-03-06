@@ -37,10 +37,10 @@ public class TaskChangeController {
     private Label PriorityLabel;
 
     @FXML
-    private ChoiceBox<?> StatusChoiceBox;
+    private Label StatusLabel;
 
     @FXML
-    private Label StatusLabel;
+    private Label StatusContentLabel;
 
     @FXML
     private Text TaskIdDisplay;

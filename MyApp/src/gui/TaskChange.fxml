@@ -18,11 +18,11 @@
       <ChoiceBox fx:id="YearChoiceBox" layoutX="379.0" layoutY="52.0" prefHeight="25.0" prefWidth="72.0" />
       <ChoiceBox fx:id="MonthChoiceBox" layoutX="469.0" layoutY="52.0" prefHeight="25.0" prefWidth="51.0" />
       <ChoiceBox fx:id="DayChoiceBox" layoutX="537.0" layoutY="52.0" prefHeight="25.0" prefWidth="54.0" />
-      <ChoiceBox fx:id="StatusChoiceBox" layoutX="223.0" layoutY="52.0" prefHeight="25.0" prefWidth="51.0" />
       <ChoiceBox fx:id="PriorityChoiceBox" layoutX="95.0" layoutY="52.0" prefHeight="25.0" prefWidth="43.0" />
       <Label fx:id="DescriptionLabel" layoutX="155.0" layoutY="16.0" text="Description" />
       <Label fx:id="PriorityLabel" layoutX="26.0" layoutY="56.0" text="Priority" />
       <Label fx:id="StatusLabel" layoutX="155.0" layoutY="56.0" text="Status" />
       <Label fx:id="DueDateLabel" layoutX="291.0" layoutY="56.0" text="Due Date" />
+      <Label fx:id="StatusContentLabel" layoutX="197.0" layoutY="56.0" prefHeight="17.0" prefWidth="87.0" text="Assigned" textAlignment="CENTER" />
    </children>
 </Pane>

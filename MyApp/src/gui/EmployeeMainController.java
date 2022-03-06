@@ -1,17 +1,18 @@
 package gui;
 
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class EmployeeMainController {
-
-    @FXML
-    private Button ChangeStatusButton;
 
     @FXML
     private AnchorPane Display;
@@ -26,7 +27,13 @@ public class EmployeeMainController {
     private Pane Pane;
 
     @FXML
-    private Button QuitButton;
+    private Label TaskStatusLabel;
+
+    @FXML
+    private ChoiceBox<?> TaskStatusChoiceBox;
+
+    @FXML
+    private Button LogoutButton;
 
     @FXML
     private Text TitleTextField;
@@ -48,6 +55,11 @@ public class EmployeeMainController {
     @FXML
     void changeStatus(ActionEvent event) {
 
+    }
+
+    @FXML
+    void userLogout(ActionEvent event) throws IOException {
+        app.changeScene("Login.fxml");
     }
 
 }

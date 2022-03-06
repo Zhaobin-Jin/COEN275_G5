@@ -35,7 +35,7 @@ public class ManagerMainController {
     private Pane Pane;
 
     @FXML
-    private Button QuitButton;
+    private Button LogoutButton;
 
     @FXML
     private Button RemoveEmployeeButton;
@@ -67,13 +67,63 @@ public class ManagerMainController {
     }
 
     @FXML
-    void assignEmployee(ActionEvent event) {
+    void assignEmployee(ActionEvent event) throws IOException {
+        // new stage (new window)
+        Stage assignEmployeeStage = new Stage();
+        assignEmployeeStage.setTitle("Assign Employee");
+        assignEmployeeStage.setResizable(false);
 
+        // view
+        FXMLLoader assignloader = new FXMLLoader(App.class.getResource("AssignEmployee.fxml"));
+        assignloader.setController(new AssignEmployeeController());
+        Pane assignPane = assignloader.load();
+
+        // controller
+        AssignEmployeeController assignEmployeeController = assignloader.getController();
+        assignEmployeeController.setApp(this.app);
+        assignEmployeeController.setAssignEmployeeStage(assignEmployeeStage);
+
+        // scene on stage
+        Scene assignScene = new Scene(assignPane);
+        assignEmployeeStage.setScene(assignScene);
+
+        // specify the modality for new mainWindow
+        assignEmployeeStage.initModality(Modality.WINDOW_MODAL);
+
+        // specify the owner window for new windowModal
+        assignEmployeeStage.initOwner(primaryStage);
+
+        assignEmployeeStage.show();
     }
 
     @FXML
-    void removeEmployee(ActionEvent event) {
+    void removeEmployee(ActionEvent event) throws IOException {
+        // new stage (new window)
+        Stage removeEmployeeStage = new Stage();
+        removeEmployeeStage.setTitle("Remove Employee");
+        removeEmployeeStage.setResizable(false);
 
+        // view
+        FXMLLoader removeloader = new FXMLLoader(App.class.getResource("RemoveEmployee.fxml"));
+        removeloader.setController(new RemoveEmployeeController());
+        Pane removePane = removeloader.load();
+
+        // controller
+        RemoveEmployeeController removeEmployeeController = removeloader.getController();
+        removeEmployeeController.setApp(this.app);
+        removeEmployeeController.setRemoveEmployeeStage(removeEmployeeStage);
+
+        // scene on stage
+        Scene removeScene = new Scene(removePane);
+        removeEmployeeStage.setScene(removeScene);
+
+        // specify the modality for new mainWindow
+        removeEmployeeStage.initModality(Modality.WINDOW_MODAL);
+
+        // specify the owner window for new windowModal
+        removeEmployeeStage.initOwner(primaryStage);
+
+        removeEmployeeStage.show();
     }
 
     @FXML
@@ -115,6 +165,11 @@ public class ManagerMainController {
     @FXML
     void removeTask(ActionEvent event) {
 
+    }
+
+    @FXML
+    void userLogout(ActionEvent event) throws IOException {
+        app.changeScene("Login.fxml");
     }
 
 }

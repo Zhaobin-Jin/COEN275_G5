@@ -48,8 +48,10 @@ public class App extends Application {
         loader = new FXMLLoader(App.class.getResource(fxml));
         if (fxml == "ManagerMain.fxml") {
             loader.setController(new ManagerMainController());
-        } else {
+        } else if (fxml == "EmployeeMain.fxml") {
             loader.setController(new EmployeeMainController());
+        } else {
+            loader.setController(new LoginController());
         }
         Pane pane = loader.load();
 
@@ -58,10 +60,14 @@ public class App extends Application {
             ManagerMainController managerMainController = loader.getController();
             managerMainController.setApp(this);
             managerMainController.setPrimaryStage(this.primaryStage);
-        } else {
+        } else if (fxml == "EmployeeMain.fxml") {
             EmployeeMainController employeeMainController = loader.getController();
             employeeMainController.setApp(this);
             employeeMainController.setPrimaryStage(this.primaryStage);
+        } else {
+            LoginController loginController = loader.getController();
+            loginController.setApp(this);
+            loginController.setPrimaryStage(this.primaryStage);
         }
 
         // scene on Stage

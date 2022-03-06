@@ -10,11 +10,7 @@
 
 <Pane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="QuitButton" layoutX="85.0" layoutY="539.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="52.0" text="Quit">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
+      <Button fx:id="LogoutButton" layoutX="53.0" layoutY="540.0" mnemonicParsing="false" onAction="#userLogout" prefHeight="25.0" prefWidth="113.0" text="Log out" />
       <Button fx:id="TaskCreateButton" layoutX="220.0" layoutY="40.0" mnemonicParsing="false" onAction="#createTask" prefHeight="37.0" prefWidth="37.0" text="+" />
       <ScrollPane layoutX="220.0" layoutY="93.0" prefHeight="503.0" prefWidth="610.0">
         <content>

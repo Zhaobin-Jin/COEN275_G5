@@ -10,6 +10,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class LoginController {
 
@@ -39,6 +40,13 @@ public class LoginController {
     // connect app class to controller
     public void setApp(App app) {
         this.app = app;
+    }
+
+    private Stage primaryStage;
+
+    // connect primary stage to task stage
+    public void setPrimaryStage(Stage primaryStage) {
+        this.primaryStage = primaryStage;
     }
 
     @FXML
