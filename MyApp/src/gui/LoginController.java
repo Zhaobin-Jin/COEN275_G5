@@ -56,20 +56,10 @@ public class LoginController {
 
     private void checkLogin() throws IOException {
 
-        // 测试用!!!!! 这里需要去数据库里检查用户名,密码与种类
-        if (UserIdTextField.getText().toString().equals("manager")
-                && PasswordTextField.getText().toString().equals("275")) {
-            Message.setText("Success!");
-            app.changeScene("ManagerMain.fxml");
-        }
+        int id = this.getUserId();
+        String password = this.getPassword();
 
-        else if (UserIdTextField.getText().toString().equals("employee")
-                && PasswordTextField.getText().toString().equals("275")) {
-            Message.setText("Success!");
-            app.changeScene("EmployeeMain.fxml");
-        }
-
-        else if (UserIdTextField.getText().isEmpty()) {
+        if (UserIdTextField.getText().isEmpty()) {
             Message.setText("Please enter your user ID!");
         }
 
@@ -77,9 +67,30 @@ public class LoginController {
             Message.setText("Please enter your password!");
         }
 
+        // 测试用!!!!! 这里需要去数据库里检查用户名,密码与种类
+        else if (UserIdTextField.getText().toString().equals("employee")
+                && PasswordTextField.getText().toString().equals("275")) {
+            Message.setText("Success!");
+            app.changeScene("EmployeeMain.fxml");
+        }
+
+        else if (UserIdTextField.getText().toString().equals("manager")
+                && PasswordTextField.getText().toString().equals("275")) {
+            Message.setText("Success!");
+            app.changeScene("ManagerMain.fxml");
+        }
+
         else {
             Message.setText("Wrong username or password!");
         }
+    }
+
+    public int getUserId() {
+        return Integer.parseInt(UserIdTextField.getText().toString());
+    }
+
+    public String getPassword() {
+        return PasswordTextField.getText().toString();
     }
 
 }

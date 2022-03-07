@@ -1,9 +1,12 @@
 package gui;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
@@ -12,7 +15,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class EmployeeMainController {
+public class EmployeeMainController implements Initializable {
 
     @FXML
     private AnchorPane Display;
@@ -30,7 +33,7 @@ public class EmployeeMainController {
     private Label TaskStatusLabel;
 
     @FXML
-    private ChoiceBox<?> TaskStatusChoiceBox;
+    private ChoiceBox<String> TaskStatusChoiceBox;
 
     @FXML
     private Button LogoutButton;
@@ -53,8 +56,25 @@ public class EmployeeMainController {
     }
 
     @FXML
-    void changeStatus(ActionEvent event) {
+    private String[] statusList = { "Assigned", "In-progress", "Completed" };
 
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        TaskStatusChoiceBox.getItems().addAll(statusList);
+        TaskStatusChoiceBox.setOnAction(this::getStatus);
+    }
+
+    public int getStatus(ActionEvent event) {
+        String status = TaskStatusChoiceBox.getValue();
+        int sint;
+        if (status == "Assigned") {
+            sint = 0;
+        } else if (status == "In-progress") {
+            sint = 1;
+        } else {
+            sint = 2;
+        }
+        return sint;
     }
 
     @FXML
