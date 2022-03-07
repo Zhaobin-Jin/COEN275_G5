@@ -10,11 +10,11 @@
 
 <Pane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="LogoutButton" layoutX="53.0" layoutY="540.0" mnemonicParsing="false" onAction="#userLogout" prefHeight="25.0" prefWidth="113.0" text="Log out" />
-      <Button fx:id="TaskCreateButton" layoutX="220.0" layoutY="40.0" mnemonicParsing="false" onAction="#createTask" prefHeight="37.0" prefWidth="37.0" text="+" />
+      <Button fx:id="LogoutButton" alignment="CENTER" layoutX="53.0" layoutY="540.0" mnemonicParsing="false" onAction="#userLogout" prefHeight="25.0" prefWidth="113.0" text="Log out" />
+      <Button fx:id="TaskCreateButton" alignment="CENTER" layoutX="220.0" layoutY="40.0" mnemonicParsing="false" onAction="#createTask" prefHeight="37.0" prefWidth="37.0" text="+" textAlignment="CENTER" />
       <ScrollPane layoutX="220.0" layoutY="93.0" prefHeight="503.0" prefWidth="610.0">
         <content>
-          <AnchorPane fx:id="Display" minHeight="0.0" minWidth="0.0" prefHeight="730.0" prefWidth="595.0" />
+          <AnchorPane fx:id="Display" minHeight="0.0" minWidth="0.0" prefHeight="730.0" prefWidth="589.0" />
         </content>
       </ScrollPane>
       <Text fx:id="NameTextField" layoutX="58.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yooo Hooo" textAlignment="CENTER" wrappingWidth="105.13671875">
@@ -22,16 +22,16 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Text fx:id="IdTextField" layoutX="75.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="91923920">
+      <Text fx:id="IdTextField" layoutX="75.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="91923920" textAlignment="CENTER">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
       <Text fx:id="TitleTextField" layoutX="84.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manager" textAlignment="CENTER" />
-      <Button fx:id="AssignEmployeeButton" layoutX="33.0" layoutY="164.0" mnemonicParsing="false" onAction="#assignEmployee" prefHeight="25.0" prefWidth="156.0" text="Assign Employee" />
-      <Button fx:id="ModifyTaskButton" layoutX="33.0" layoutY="256.0" mnemonicParsing="false" onAction="#modifyTask" prefHeight="25.0" prefWidth="156.0" text="Modify Task" />
-      <Button fx:id="RemoveEmployeeButton" layoutX="33.0" layoutY="210.0" mnemonicParsing="false" onAction="#removeEmployee" prefHeight="25.0" prefWidth="156.0" text="Remove Employee" />
-      <Button fx:id="RemoveTaskButton" layoutX="33.0" layoutY="302.0" mnemonicParsing="false" onAction="#removeTask" prefHeight="25.0" prefWidth="156.0" text="Remove Task" />
+      <Button fx:id="AssignEmployeeButton" alignment="CENTER" layoutX="33.0" layoutY="164.0" mnemonicParsing="false" onAction="#assignEmployee" prefHeight="25.0" prefWidth="156.0" text="Assign Employee" textAlignment="CENTER" />
+      <Button fx:id="ModifyTaskButton" alignment="CENTER" layoutX="33.0" layoutY="256.0" mnemonicParsing="false" onAction="#modifyTask" prefHeight="25.0" prefWidth="156.0" text="Modify Task" textAlignment="CENTER" />
+      <Button fx:id="RemoveEmployeeButton" alignment="CENTER" layoutX="33.0" layoutY="210.0" mnemonicParsing="false" onAction="#removeEmployee" prefHeight="25.0" prefWidth="156.0" text="Remove Employee" textAlignment="CENTER" />
+      <Button fx:id="RemoveTaskButton" alignment="CENTER" layoutX="33.0" layoutY="302.0" mnemonicParsing="false" onAction="#removeTask" prefHeight="25.0" prefWidth="156.0" text="Remove Task" textAlignment="CENTER" />
       <TextField fx:id="TaskDescriptionTextField" layoutX="274.0" layoutY="40.0" prefHeight="37.0" prefWidth="557.0" />
    </children>
 </Pane>

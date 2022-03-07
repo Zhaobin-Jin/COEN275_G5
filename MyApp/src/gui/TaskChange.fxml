@@ -23,6 +23,6 @@
       <Label fx:id="PriorityLabel" layoutX="26.0" layoutY="56.0" text="Priority" />
       <Label fx:id="StatusLabel" layoutX="155.0" layoutY="56.0" text="Status" />
       <Label fx:id="DueDateLabel" layoutX="291.0" layoutY="56.0" text="Due Date" />
-      <Label fx:id="StatusContentLabel" layoutX="197.0" layoutY="56.0" prefHeight="17.0" prefWidth="87.0" text="Assigned" textAlignment="CENTER" />
+      <Label fx:id="StatusContentLabel" alignment="CENTER" layoutX="197.0" layoutY="56.0" prefHeight="17.0" prefWidth="87.0" text="Assigned" textAlignment="CENTER" />
    </children>
 </Pane>

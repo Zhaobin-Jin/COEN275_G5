@@ -11,7 +11,7 @@
 
 <Pane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="LogoutButton" layoutX="53.0" layoutY="540.0" mnemonicParsing="false" onAction="#userLogout" prefHeight="25.0" prefWidth="113.0" text="Log out" />
+      <Button fx:id="LogoutButton" alignment="CENTER" layoutX="53.0" layoutY="540.0" mnemonicParsing="false" onAction="#userLogout" prefHeight="25.0" prefWidth="113.0" text="Log out" />
       <ScrollPane layoutX="220.0" layoutY="30.0" prefHeight="576.0" prefWidth="600.0">
         <content>
           <AnchorPane fx:id="Display" minHeight="0.0" minWidth="0.0" prefHeight="730.0" prefWidth="581.0" />
@@ -22,13 +22,13 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Text fx:id="IdTextField" layoutX="75.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="91923920">
+      <Text fx:id="IdTextField" layoutX="75.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="91923920" textAlignment="CENTER">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
       <Text fx:id="TitleTextField" layoutX="82.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee" textAlignment="CENTER" />
-      <Label fx:id="TaskStatusLabel" layoutX="72.0" layoutY="183.0" text="Task Status">
+      <Label fx:id="TaskStatusLabel" alignment="CENTER" layoutX="72.0" layoutY="183.0" text="Task Status" textAlignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>
